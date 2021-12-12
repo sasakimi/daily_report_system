@@ -26,7 +26,7 @@ public class EmployeeService extends ServiceBase {
      */
     public List<EmployeeView> getPerPage(int page) {
         List<Employee> employees = em.createNamedQuery(JpaConst.Q_EMP_GET_ALL, Employee.class)
-                .setFirstResult(JpaConst.ROW_PER_PAGE * (page = 1))
+                .setFirstResult(JpaConst.ROW_PER_PAGE * (page - 1))
                 .setMaxResults(JpaConst.ROW_PER_PAGE)
                 .getResultList();
 
