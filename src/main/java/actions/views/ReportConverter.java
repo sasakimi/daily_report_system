@@ -20,7 +20,7 @@ public class ReportConverter {
     public static Report toModel(ReportView rv) {
         return new Report(
                 rv.getId(),
-                EmployeeConverter.toModel(null),
+                EmployeeConverter.toModel(rv.getEmployee()),
                 rv.getReportDate(),
                 rv.getTitle(),
                 rv.getContent(),
