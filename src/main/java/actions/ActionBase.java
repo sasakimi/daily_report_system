@@ -162,11 +162,11 @@ public abstract class ActionBase {
     }
 
     /**
-     * 文字列をLacalData型に変換する
+     * 文字列をLocalData型に変換する
      * @param strDate 変換前文字列
      * @return 変換後LocalDateインスタンス
      */
-    protected LocalDate toLacalDate(String strDate) {
+    protected LocalDate toLocalDate(String strDate) {
         if(strDate == null || strDate.equals("")) {
             return LocalDate.now();
         }
